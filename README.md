@@ -61,3 +61,9 @@ JavaScript handles form submission, DOM updates, search/filtering, support count
 This project demonstrates practice with responsive UI design, forms, DOM manipulation, JavaScript objects/arrays, events, localStorage, client-side image handling and translating a real-world problem into a working MVP.
 
 **Built for Hack Devengers 1.0.**
+
+##Screenshots
+
+![page 1](page1.png)
+![page 2](page2.png)
+![Add report](addreport.png)
