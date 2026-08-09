@@ -1,4 +1,4 @@
-# CampusConnect 🏫
+# CampusConnect 
 
 ### Hack Devengers 1.0 — Open Innovation Project
 
