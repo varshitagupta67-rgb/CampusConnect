@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CampusConnect - Student campus issue reporting platform">
+<title>CampusConnect | Improve Your Campus</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="#"><div class="brand-icon">CC</div><div><strong>CampusConnect</strong><span>Student-powered campus improvement</span></div></a>
+  <button class="primary-btn" id="openReportBtn">+ Report an Issue</button>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <span class="badge">🏫 Built for better campus life</span>
+    <h1>See a problem?<br><span>Help improve it.</span></h1>
+    <p>CampusConnect gives students a simple way to report campus issues, support important problems, and follow their progress.</p>
+    <div class="hero-actions"><button class="primary-btn" id="heroReportBtn">Report an Issue</button><a class="secondary-btn" href="#reports">View Reports ↓</a></div>
+    <div class="trust-row"><span>✓ Simple reporting</span><span>✓ Transparent status</span><span>✓ Student-focused</span></div>
+  </div>
+  <div class="hero-card">
+    <div class="hero-card-header"><div><small>Campus overview</small><h3>Issue status</h3></div><span class="live-pill"><i></i> Live</span></div>
+    <div class="mini-status"><span>📋 Reported</span><strong id="heroReported">0</strong></div>
+    <div class="mini-status"><span>🔧 In Progress</span><strong id="heroInProgress">0</strong></div>
+    <div class="mini-status"><span>✅ Resolved</span><strong id="heroResolved">0</strong></div>
+    <div class="hero-note">Every report starts a conversation about making campus better.</div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stat-card"><span class="stat-icon">📋</span><div><strong id="totalIssues">0</strong><small>Total Reports</small></div></div>
+  <div class="stat-card"><span class="stat-icon">⏳</span><div><strong id="pendingIssues">0</strong><small>Reported</small></div></div>
+  <div class="stat-card"><span class="stat-icon">🔧</span><div><strong id="progressIssues">0</strong><small>In Progress</small></div></div>
+  <div class="stat-card"><span class="stat-icon">✅</span><div><strong id="resolvedIssues">0</strong><small>Resolved</small></div></div>
+</section>
+
+<section class="how-it-works">
+  <div class="section-title center"><span class="eyebrow">HOW IT WORKS</span><h2>From problem to progress</h2><p>A simple three-step flow designed around students.</p></div>
+  <div class="steps">
+    <div class="step"><span>01</span><h3>Report</h3><p>Describe the issue and tell us where it is.</p></div>
+    <div class="step"><span>02</span><h3>Support</h3><p>Students can support issues that affect them too.</p></div>
+    <div class="step"><span>03</span><h3>Track</h3><p>Follow whether the issue is reported, ongoing, or resolved.</p></div>
+  </div>
+</section>
+
+<section class="reports-section" id="reports">
+  <div class="section-heading">
+    <div class="section-title"><span class="eyebrow">CAMPUS REPORTS</span><h2>What students are reporting</h2><p>Browse recent issues and support the ones that matter.</p></div>
+    <div class="controls">
+      <input type="search" id="searchInput" placeholder="Search reports..." aria-label="Search reports">
+      <select id="categoryFilter"><option value="all">All Categories</option><option>Infrastructure</option><option>Cleanliness</option><option>Safety</option><option>Technology</option><option>Other</option></select>
+      <select id="statusFilter"><option value="all">All Status</option><option>Reported</option><option>In Progress</option><option>Resolved</option></select>
+    </div>
+  </div>
+  <div id="issuesGrid" class="issues-grid"></div>
+  <div id="emptyState" class="empty-state hidden"><div>🔎</div><h3>No reports found</h3><p>Try another search or filter.</p></div>
+</section>
+
+<section class="impact">
+  <div><span class="eyebrow">WHY CAMPUSCONNECT?</span><h2>Small reports can lead to meaningful change.</h2></div>
+  <p>The project is a practical MVP that can later connect students, campus administration, and maintenance teams through a shared system.</p>
+</section>
+</main>
+
+<footer><strong>CampusConnect</strong><span>Hack Devengers 1.0 • Student Innovation Project</span></footer>
+
+<div class="modal hidden" id="reportModal">
+  <div class="modal-box">
+    <button class="close-btn" id="closeModalBtn" aria-label="Close">×</button>
+    <span class="eyebrow">NEW REPORT</span><h2>Report a campus issue</h2><p class="modal-subtitle">Give enough detail so the problem is easy to understand.</p>
+    <form id="reportForm">
+      <label>Problem title<input type="text" id="title" maxlength="80" placeholder="e.g. Classroom fan is not working" required></label>
+      <label>Category<select id="category" required><option value="">Select a category</option><option>Infrastructure</option><option>Cleanliness</option><option>Safety</option><option>Technology</option><option>Other</option></select></label>
+      <label>Location<input type="text" id="location" maxlength="80" placeholder="e.g. Block A, Room 204" required></label>
+      <label>Description<textarea id="description" rows="4" maxlength="400" placeholder="What is happening? Add useful details..." required></textarea></label>
+      <label>Photo <span class="optional">(optional)</span><input type="file" id="photo" accept="image/*"></label>
+      <div id="photoPreview" class="photo-preview hidden"></div>
+      <button class="primary-btn full-width" type="submit">Submit Report</button>
+    </form>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>

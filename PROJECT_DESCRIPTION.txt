@@ -1,0 +1,9 @@
+CampusConnect is a student-focused campus issue reporting platform created for Hack Devengers 1.0.
+
+Students regularly notice everyday problems such as broken classroom equipment, cleanliness issues, Wi-Fi problems, water leakage or faulty lights, but there may not be a simple way to report these issues and follow their progress.
+
+CampusConnect addresses this problem through a clean and easy-to-use web interface. Students can submit an issue with its category, location, description and an optional photo. Other students can support existing reports, while the dashboard provides a quick view of reported, ongoing and resolved issues.
+
+The current MVP is built using HTML, CSS and JavaScript. Browser localStorage is used to retain submitted reports without requiring a server. The project can later be extended with a Node.js backend, database, authentication, notifications and an admin dashboard.
+
+The goal is to make campus problem reporting simple, visible and organized while encouraging students to participate in improving their campus.
