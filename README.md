@@ -62,8 +62,13 @@ This project demonstrates practice with responsive UI design, forms, DOM manipul
 
 **Built for Hack Devengers 1.0.**
 
-##Screenshots
+## Screenshots
 
+### Home Page
 ![page 1](page1.png)
+
+### Report Issue
 ![page 2](page2.png)
+
+### Dashboard
 ![Add report](addreport.png)
