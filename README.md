@@ -67,8 +67,8 @@ This project demonstrates practice with responsive UI design, forms, DOM manipul
 ### Home Page
 ![page 1](page1.png)
 
-### Report Issue
+### Issues Reported
 ![page 2](page2.png)
 
-### Dashboard
+### Report Issues
 ![Add report](addreport.png)
