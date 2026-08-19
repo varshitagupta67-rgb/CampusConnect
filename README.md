@@ -65,7 +65,7 @@ This project demonstrates practice with responsive UI design, forms, DOM manipul
 ## Screenshots
 
 ### Home Page
-![Home Page](screenshots/addreport.png)
+![Home Page](screenshots/page1.png)
 
 ### Issues Reported
 ![Issues Reported](screenshots/page2.png)
